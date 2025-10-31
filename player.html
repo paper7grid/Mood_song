@@ -3,4 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Music Player</title>
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="player_page">
+        <div class="player">
+            <button class="back-button" oneclick="goBack()"><i class="fas fa-arrow-left"></i> Back</button>
+            <div class="song-details">
+                <div class="now-playing">Playing <span id="track-num">1</span> of <span id="track-total">1</span></div>
+                <img class=""track-art" src="" alt="Album Cover">
+                <div class=""track-name">Track Name</div>
+                <div class=""track-artist">Artist Name</div>
+        </div>
+
