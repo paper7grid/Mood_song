@@ -11,9 +11,33 @@
             <button class="back-button" oneclick="goBack()"><i class="fas fa-arrow-left"></i> Back</button>
             <div class="song-details">
                 <div class="now-playing">Playing <span id="track-num">1</span> of <span id="track-total">1</span></div>
-                <img class=""track-art" src="" alt="Album Cover">
-                <div class=""track-name">Track Name</div>
-                <div class=""track-artist">Artist Name</div>
+                <img class="track-art" src="" alt="Album Cover">
+                <div class="track-name">Track Name</div>
+                <div class="track-artist">Artist Name</div>
         </div>
-        
+        <div class="buttons">
+            <div class="prev-track" oneclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="playpause-track" oneclick="playpauseTrack()"><i class="fa fa-play fa-5x"></i>
+        </div>
+        <div class="next-track" oneclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i>
+        </div>
+    </div>
 
+    <div class="slider_container">
+        <div class="current-time">00:00</div>
+        <input type="range" min="1" max="100" value="0"
+               class="seek_slider" onchange="seekTo()">
+        <div class="total-duration">00:00</div>
+    </div>
+    <div class="slider_container">
+        <i class="fa fa-volume-down"></i>
+        <input type="range" min="1" max="100" value="99"
+               class="volume_slider" onchange="set_Volume()">
+        <i class="fa fa-volume-up"></i>
+    </div>
+</div>
+<script src="data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
