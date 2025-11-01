@@ -102,17 +102,17 @@ body.player_page {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 20px;
-    padding: 40px;
+    padding: 60px;
     text-align: center;
     color: #fff;
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-    width: 350px;
+    width: 500px;
 }
 .player .song-details img.track-art {
-    width: 200px;
-    height: 200px;
-    border-radius: 15px;
-    margin: 20px 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    margin: 30px 0;
     object-fit: cover;
 }
 .player .buttons {
