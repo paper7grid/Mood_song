@@ -11,16 +11,16 @@
             <p class="subtitle">Select your mood and let the music match your vibe!!</p>
 
             <div class="mood_buttons">
-                <button oneclick="selectmood('happy')">Happy</button>
-                <button oneclick="selectmood('sad')">Sad</button>
-                <button oneclick="selectmood('calm')">Calm</button>
+                <button onclick="selectmood('happy')">Happy</button>
+                <button onclick="selectmood('sad')">Sad</button>
+                <button onclick="selectmood('calm')">Calm</button>
             </div>
         </div>
 
             <script>
                 function selectmood(mood) {
-                    alert("You selected " + mood + " mood! get ready for your playlist...");
-                    window.location.href = 'playlist.html?mood=${mood}';
+                    alert("You selected " + mood + " mood! get ready for your playlist... Don't worry (lol) just click OK!");
+                    window.location.href = `player.html?mood=${mood}`;
                 }
             </script>
     </body>

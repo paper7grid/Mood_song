@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const mood = params.get("mood") || "happy";
 let track_list = playlists[mood];
-let track_indez = 0;
+let track_index = 0;
 let isPlaying = false;
 
 let curr_track = document.createElement("audio");
@@ -24,7 +24,8 @@ function loadTrack(index) {
     curr_track.src = track_list[index].path;
     curr_track.load();
 
-    track_artist.src = track_list[index].cover;
+    const track_art = document.querySelector(".track-art");
+    track_art.src = track_list[index].cover;
     track_name.textContent = track_list[index].name;
     track_artist.textContent = track_list[index].artist;
     document.getElementById("track-num").textContent = index + 1;
@@ -37,7 +38,7 @@ function resetValues() {
     total_duration.textContent = "00:00";
     seek_slider.value = 0;
 }
-funstion playpauseTrack() {
+function playpauseTrack() {
     if (!isPlaying) playTrack();
     else pauseTrack();
 }
@@ -54,7 +55,7 @@ function pauseTrack() {
     playpause_btn.classList.add("fa-play-circle");
 }
 function nextTrack(){ 
-    track_index = track_index + 1) % track_list.length;
+    track_index = (track_index + 1) % track_list.length;
     loadTrack(track_index);
     playTrack();
 }
@@ -67,7 +68,7 @@ function seekTo() {
   let seekto = curr_track.duration * (seek_slider.value / 100);
   curr_track.currentTime = seekto;
 }
-function setVolume() {
+function set_Volume() {
   curr_track.volume = volume_slider.value / 100;
 }
 function seekUpdate() {
