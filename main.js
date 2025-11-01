@@ -37,4 +37,36 @@ function resetValues() {
     total_duration.textContent = "00:00";
     seek_slider.value = 0;
 }
-
+funstion playpauseTrack() {
+    if (!isPlaying) playTrack();
+    else pauseTrack();
+}
+function playTrack() {
+    curr_track.play();
+    isPlaying = true;
+    playpause_btn.classList.remove("fa-play-circle");
+    playpause_btn.classList.add("fa-pause-circle");
+}
+function pauseTrack() {
+    curr_track.pause();
+    isPlaying = false;
+    playpause_btn.classList.remove("fa-pause-circle");
+    playpause_btn.classList.add("fa-play-circle");
+}
+function nextTrack(){ 
+    track_index = track_index + 1) % track_list.length;
+    loadTrack(track_index);
+    playTrack();
+}
+function prevTrack() {
+  track_index = (track_index - 1 + track_list.length) % track_list.length;
+  loadTrack(track_index);
+  playTrack();
+}
+function seekTo() {
+  let seekto = curr_track.duration * (seek_slider.value / 100);
+  curr_track.currentTime = seekto;
+}
+function setVolume() {
+  curr_track.volume = volume_slider.value / 100;
+}
