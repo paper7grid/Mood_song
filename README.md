@@ -1,1 +1,6 @@
 # Mood_song
+Hi everyone!! Moodify, is a web-based music player designed to match your mood with the perfect playlist.The project allows users to browse, play, and go through songs easily, while enjoying them based on their mood! For now it is just a handful of song I  picked for each playlist but moving forward I will add more. This project was built using HTML, CSS, and JavaScript, with a focus on clean design + aesthetic appearance. I also used external icon libraries (Font Awesome) and structured the code so new songs could be added easily via a JavaScript array in data.js. Since I had not made a project like this before there were a few struggles I faced including the buttons functionality, where it initially were not working due to a simple syntax error, and then the layout issue where the play bitton (and other buttons) were too big, and lastly the songs not connecting to the main page!
+Further improvements can be adding more variety of songs, more mood genres, and maybe an automatic shuffle + animation! 
+Hope you like my project!!
+
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
